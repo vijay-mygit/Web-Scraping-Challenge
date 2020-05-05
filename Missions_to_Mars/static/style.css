@@ -1,0 +1,7 @@
+/*url('https://earthsky.org/upl/2018/11/mars-landing-curiosity-artist-e1543073738523.jpeg')
+*/
+
+.jumboImg{
+    background-image: url('jumbo.jpeg');         
+    background-size: cover;
+}
