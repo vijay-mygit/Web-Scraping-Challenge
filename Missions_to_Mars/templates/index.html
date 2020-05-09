@@ -54,41 +54,17 @@
           <h2 strong style="text-align: center;">Mars Hemispheres</h2>
           <hr>
         </div>
+        {% for hemisphere in mars_data.hemisphere_image_urls %}
         <div class = 'col-lg-6'>
+          <h1></h1>
           <div class="card" style="width: 27rem;background-color: gray;">
-            <img src="{{mars_data.hemisphere_image_urls[0]['image_url']}}" class="card-img-top" alt="Cerebrus Hemisphere">
+            <img src="{{hemisphere.image_url}}" class="card-img-top" alt="hemisphere 1">
             <div class="card-body">
-              <h6 strong >{{mars_data.hemisphere_image_urls[0]['title']}}</h6>
+              <h6 strong >{{hemisphere.title}}</h6>
             </div>
           </div>          
         </div>
-        <div class = 'col-lg-6'>
-          <div class="card" style="width: 27rem;background-color: gray;">
-            <img src="{{mars_data.hemisphere_image_urls[1]['image_url']}}" class="card-img-top" alt="Schiaparelli Hemisphere">
-            <div class="card-body">
-              <h6 strong>{{mars_data.hemisphere_image_urls[1]['title']}}</h6>
-            </div>
-          </div>          
-        </div>        
-      </div>
-      <h1></h1>
-      <div class = 'row'>
-        <div class = 'col-lg-6'>
-          <div class="card" style="width: 27rem;background-color: gray;">
-            <img src="{{mars_data.hemisphere_image_urls[2]['image_url']}}" class="card-img-top" alt="styris Major Hemishpere">
-            <div class="card-body">
-              <h6 strong>{{mars_data.hemisphere_image_urls[2]['title']}}</h6>
-            </div>
-          </div>
-        </div>
-        <div class = 'col-lg-6'>
-          <div class="card" style="width: 27rem;background-color: gray;">
-            <img src="{{mars_data.hemisphere_image_urls[3]['image_url']}}" class="card-img-top" alt="Valles Marineris Hemisphere">
-            <div class="card-body">
-              <h6 strong>{{mars_data.hemisphere_image_urls[3]['title']}}</h6>
-            </div>
-          </div>
-        </div>               
+        {% endfor %}
       </div>
       <h1></h1> 
     </div>
